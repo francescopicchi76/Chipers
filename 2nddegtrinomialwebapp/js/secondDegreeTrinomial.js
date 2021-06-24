@@ -32,15 +32,9 @@ function giveSolutions(){
   }
   else {
   risultatoDelta = trinomial.d;
-  if (trinomial.a==0 && trinomial.b!=0){
-    let x=-trinomial.c/trinomial.b;
-    risultato = `L'espressione è in realtà un binomio di primo grado che ha soluzione ${x}`;
-  }
-  else if (trinomial.a==0 && trinomial.b==0 && trinomial.c==0){
-    risultato = "Le soluzioni sono l'insieme dei numeri reali {R}, cioè il trinomio ha infinite soluzioni";
-  }
-  else if (trinomial.a==0 && trinomial.b==0 && trinomial.c!=0){
-    risultato = "Le soluzioni sono l'insieme vuoto {R}, cioè il trinomio non ha soluzioni reali";
+  if (trinomial.a==0){
+    risultato = `Attenzione, è necesario che a sia diverso da 0 per avere un trinomio di 2° grado`;
+    risultatoDelta = ""
   }
   else if (trinomial.a!=0 && trinomial.d<0) {
     risultato = "Le soluzioni sono l'insieme vuoto {0}, cioè il trinomio non ha soluzioni reali, perché il \u0394 è negativo";
@@ -78,15 +72,8 @@ function studySign() {
     signOfa = "negativo";
     inverseSign = "positivo";
   }
-  if (trinomial.a==0 && trinomial.b!=0){
-    let x=-trinomial.c/trinomial.b;
-    risultatoSegno = `Il binomio è positivo per x>${x}; è negativo per x<${x}`;
-  }
-  else if (trinomial.a==0 && trinomial.b==0 && trinomial.c==0){
-    risultatoSegno = "L'espressione è uguale a zero per ogni valore reale di x";
-  }
-  else if (trinomial.a==0 && trinomial.b==0 && trinomial.c!=0){
-    risultatoSegno = "L'espressione ha lo stesso segno di c per ogni valore reale di x";
+  if (trinomial.a==0){
+    risultatoSegno = `Attenzione, è necessario che a sia diverso da 0 per avere un trinomio di 2° grado`;
   }
   else if (trinomial.a!=0 && trinomial.d<0) {
     risultatoSegno = `Il trinomio è ${signOfa} per ogni valore di x, cioè ha sempre il segno di a, perché il \u0394 è negativo`;
