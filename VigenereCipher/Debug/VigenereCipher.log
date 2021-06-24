@@ -1,0 +1,5 @@
+﻿  VigenereCipher.cpp
+C:\Users\Finzi\source\repos\VigenereCipher\VigenereCipher.cpp(29,20): warning C4018: '<': errata corrispondenza tra signed e unsigned
+C:\Users\Finzi\source\repos\VigenereCipher\VigenereCipher.cpp(30,14): warning C4018: '>=': errata corrispondenza tra signed e unsigned
+C:\Users\Finzi\source\repos\VigenereCipher\VigenereCipher.cpp(38): error C4700: utilizzata variabile locale 'a' non inizializzata
+C:\Users\Finzi\source\repos\VigenereCipher\VigenereCipher.cpp(39): error C4700: utilizzata variabile locale 'b' non inizializzata

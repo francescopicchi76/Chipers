@@ -1,0 +1,2 @@
+C:\Users\Finzi\source\repos\VigenereCipher\Debug\VigenereCipher.exe
+C:\Users\Finzi\source\repos\VigenereCipher\Debug\VigenereCipher.pdb

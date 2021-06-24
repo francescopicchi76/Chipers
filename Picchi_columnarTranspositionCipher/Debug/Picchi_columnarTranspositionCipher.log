@@ -1,0 +1,5 @@
+﻿  Picchi_columnarTranspositionCipher.cpp
+C:\Users\Finzi\source\repos\Picchi_columnarTranspositionCipher\Picchi_columnarTranspositionCipher.cpp(31,27): warning C4018: '<': errata corrispondenza tra signed e unsigned
+C:\Users\Finzi\source\repos\Picchi_columnarTranspositionCipher\Picchi_columnarTranspositionCipher.cpp(72,23): warning C4018: '<': errata corrispondenza tra signed e unsigned
+C:\Users\Finzi\source\repos\Picchi_columnarTranspositionCipher\Picchi_columnarTranspositionCipher.cpp(128,23): warning C4018: '<': errata corrispondenza tra signed e unsigned
+  Picchi_columnarTranspositionCipher.vcxproj -> C:\Users\Finzi\source\repos\Picchi_columnarTranspositionCipher\Debug\Picchi_columnarTranspositionCipher.exe
