@@ -1,1 +1,2 @@
-Here is a simple web programme (HTML/CSS/JS) to study a 2nd degree trinomial.
+# HTML/CSS/JS
+Here is a simple web programme to study a 2nd degree trinomial.
