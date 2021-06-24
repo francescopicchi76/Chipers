@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>TRINOMIO 2° GRADO</title>
+    <link rel="stylesheet" href="css/2ndDegreeTrinomial_style.css">
+    <script type="text/javascript" src= "js/secondDegreeTrinomial.js"></script>
+  </head>
+  <header>
+    <h2>STUDIO DEL TRINOMIO DI SECONDO GRADO</h2>
+  </header>
+  <body>
+    <form id="studioTrinomio" method="post" name="modulo">
+      <fieldset class="cornice">
+        <legend>PARAMETRI</legend>
+        Dato un trinomio di secondo grado ax<sup>2</sup>+bx+c, inserire i parametri e premere il pulsante per studiarlo; un campo lasciato vuoto equivale a zero.
+        <p><label for="a">a =</label>
+        <input type="text" name="a"></p>
+        <p><label for="b">b = </label>
+        <input type="text" name="b"></p>
+        <p><label for="c">c =</label>
+        <input type="text" name="c"></p>
+        <input class="button" type="button" value = "Mostra i risultati" onclick="giveSolutions(); studySign()">
+        <input class="button" type="button" value = "Svuota i campi" onclick="clearFields()">
+      </fieldset>
+      <br>
+      <fieldset class="cornice">
+        <legend>RISULTATI</legend>
+        <p class="resultsfield">
+          <label for="solutions">SOLUZIONI:</label>
+          <textarea name="messageSolutions" rows="4" cols="40" readonly></textarea>
+          <label for="solutions">&Delta;=</label>
+          <input type="text" id="trinomialDelta" name="delta" readonly>
+        </p>
+        <p class="resultsfield">
+          <label for="sign">STUDIO DEL SEGNO:</label>
+          <textarea name="messageSign" rows="4" cols="40" readonly></textarea>
+        </p>
+      </fieldset>
+      </form>
+  </body>
+</html>
