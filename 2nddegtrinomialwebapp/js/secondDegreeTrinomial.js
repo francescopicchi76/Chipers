@@ -33,7 +33,7 @@ function giveSolutions(){
   else {
   risultatoDelta = trinomial.d;
   if (trinomial.a==0){
-    risultato = `Attenzione, è necesario che il parametro a sia diverso da 0 per avere un trinomio di 2° grado`;
+    risultato = `Attenzione, deve essere a\u22600 affinché il trinomio sia di 2° grado`;
     risultatoDelta = ""
   }
   else if (trinomial.a!=0 && trinomial.d<0) {
@@ -73,7 +73,7 @@ function studySign() {
     inverseSign = "positivo";
   }
   if (trinomial.a==0){
-    risultatoSegno = `Attenzione, è necessario che il parametro a sia diverso da 0 per avere un trinomio di 2° grado`;
+    risultatoSegno = `Attenzione, deve essere a\u22600 affinché il trinomio sia di 2° grado`;
   }
   else if (trinomial.a!=0 && trinomial.d<0) {
     risultatoSegno = `Il trinomio è ${signOfa} per ogni valore di x, cioè ha sempre il segno di a, perché il \u0394 è negativo`;
