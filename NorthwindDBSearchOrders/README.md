@@ -1,2 +1,1 @@
-# Initial projects
-Examples of two simple programmes in c++ (console) and a web programme.
+A simple WinForm-C# program to make queries on the database Northwind (available on the Internet)
