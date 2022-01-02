@@ -1,0 +1,11 @@
+C:\Users\Finzi\source\repos\NorthwindDBSearchOrders\bin\Debug\NorthwindDBSearchOrders.exe.config
+C:\Users\Finzi\source\repos\NorthwindDBSearchOrders\bin\Debug\NorthwindDBSearchOrders.exe
+C:\Users\Finzi\source\repos\NorthwindDBSearchOrders\bin\Debug\NorthwindDBSearchOrders.pdb
+C:\Users\Finzi\source\repos\NorthwindDBSearchOrders\obj\Debug\NorthwindDBSearchOrders.csproj.AssemblyReference.cache
+C:\Users\Finzi\source\repos\NorthwindDBSearchOrders\obj\Debug\NorthwindDBSearchOrders.Form1.resources
+C:\Users\Finzi\source\repos\NorthwindDBSearchOrders\obj\Debug\NorthwindDBSearchOrders.Properties.Resources.resources
+C:\Users\Finzi\source\repos\NorthwindDBSearchOrders\obj\Debug\NorthwindDBSearchOrders.csproj.GenerateResource.cache
+C:\Users\Finzi\source\repos\NorthwindDBSearchOrders\obj\Debug\NorthwindDBSearchOrders.csproj.CoreCompileInputs.cache
+C:\Users\Finzi\source\repos\NorthwindDBSearchOrders\obj\Debug\NorthwindDBSearchOrders.exe
+C:\Users\Finzi\source\repos\NorthwindDBSearchOrders\obj\Debug\NorthwindDBSearchOrders.pdb
+C:\Users\Finzi\source\repos\NorthwindDBSearchOrders\obj\Debug\NorthwindDBSearchOrders.Form2.resources
