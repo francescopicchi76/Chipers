@@ -1,1 +1,1 @@
-A simple WinForm-C# programme to make queries on the Northwind database (the script to create the DB is available on the Internet: https://github.com/microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs)
+A simple WinForm-C# programme to make queries about orders in the Northwind database (the script to create the Northwind DB is available on the Internet: see https://github.com/microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs)
