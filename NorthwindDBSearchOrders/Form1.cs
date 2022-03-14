@@ -59,12 +59,12 @@ namespace NorthwindDBSearchOrders
                 {
                     connectionString = dialog.conString;
                 }
-                /*If there is no OK input, reaload the main form*/
+                /*If the dialog form is closed with no OK-input, reload the main form*/
                 else
                 {
                     Form1_Load(sender, e);
                 }
-                /*If there are exceptions because the connection string wasn't typed correctly, reload the main form*/
+                /*If there are exceptions because the connection string is not working, reload the main form*/
                 try
                 {
                     northwindConn.ConnectionString = connectionString;
