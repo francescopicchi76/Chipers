@@ -52,17 +52,19 @@ namespace NorthwindDBSearchOrders
             clearData();
             connectionString = "";
 
+            /*Open a dialog form to get the connection string to the database*/
             using (Form2 dialog = new Form2())
             {
                 if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
                     connectionString = dialog.conString;
                 }
+                /*If there is no OK input, reaload the main form*/
                 else
                 {
                     Form1_Load(sender, e);
                 }
-
+                /*If there are exceptions because the connection string wasn't typed correctly, reload the main form*/
                 try
                 {
                     northwindConn.ConnectionString = connectionString;
@@ -73,7 +75,7 @@ namespace NorthwindDBSearchOrders
                     Form1_Load(sender, e);
                 }
             }
-
+            /*Store all relevant data from the database in a DataReader and load them in a DataTable*/
             SqlDataReader leggi = null;
             SqlCommand comando = new SqlCommand("", northwindConn);
             comando.CommandText = "select Orders.*, [Order Details].ProductID, Products.ProductName, Shippers.CompanyName, Employees.LastName from Orders inner join [Order Details] on Orders.OrderID = [Order Details].OrderID inner join Products on [Order Details].ProductID = Products.ProductID inner join Shippers on ShipVia = ShipperID inner join Employees on Orders.EmployeeID = Employees.EmployeeID";
@@ -82,17 +84,23 @@ namespace NorthwindDBSearchOrders
 
             leggi = comando.ExecuteReader();
             collectedDataDT.Load(leggi);
-
+            
+            /*From the main DataTable get a smaller DataView and then a corresponding DataTable including only the column of shippers' names:
+            then use the smaller DataTable to load data into the corresponding ComboBox in the main form*/
             DataView viewShipperName = new DataView(collectedDataDT);
             DataTable shipperName = viewShipperName.ToTable("viewShipperName", true, "CompanyName");
-            shipperNameCB.DataSource = shipperName;
+            shipperNameCB.DataSource = collectedDataDT;
             shipperNameCB.DisplayMember = "CompanyName";
 
+            /*From the main DataTable get a smaller DataView and then a corresponding DataTable including only the column of products' names:
+             then use the smaller DataTable to load data into the corresponding ComboBox in the main form*/
             DataView viewProductName = new DataView(collectedDataDT);
             DataTable productName = viewProductName.ToTable("viewProductName", true, "ProductName");
             productNameCB.DataSource = productName;
             productNameCB.DisplayMember = "ProductName";
 
+            /*From the main DataTable get a smaller DataView and then a corresponding DataTable including only the column of employees' last names:
+             then use the smaller DataTable to load data into the corresponding ComboBox in the main form*/
             DataView viewEmployeeName = new DataView(collectedDataDT);
             DataTable employeeName = viewProductName.ToTable("viewEmployeeName", true, "LastName");
             employeeNameCB.DataSource = employeeName;
@@ -102,7 +110,7 @@ namespace NorthwindDBSearchOrders
 
             initializeForm1controls();
         }
-
+        /*If any of the search controls in the form is changed by the user, store the inputs in the corresponding string variables*/
         private void orderIDTB_TextChanged(object sender, EventArgs e)
         {
             selectedOrderID = orderIDTB.Text;
@@ -136,8 +144,12 @@ namespace NorthwindDBSearchOrders
             gridSourceDT.Clear();
             SqlDataReader leggi = null;
             SqlCommand comando = new SqlCommand("", northwindConn);
+
+            /*Initialize the query string through an always-true-condition, so that all records are shown: such a full query is executed when no search criteria are selected*/
             queryString = "select Orders.*, [Order Details].ProductID, Products.ProductName, Shippers.CompanyName as [Shipper], Employees.LastName as [Employee] from Orders inner join [Order Details] on Orders.OrderID = [Order Details].OrderID inner join Products on [Order Details].ProductID = Products.ProductID inner join Shippers on ShipVia = ShipperID inner join Employees on Orders.EmployeeID = Employees.EmployeeID where Orders.OrderID IS NOT NULL";
             
+            /*Check if the string variables corresponding to the search criteria have been changed by the user:
+            if they have, add a corresponding condition to the query string*/
             if (selectedOrderID != "")
             {
                 queryString += " and Orders.OrderID = @OrderID";
@@ -169,6 +181,8 @@ namespace NorthwindDBSearchOrders
                 comando.Parameters.AddWithValue("@LastName", selectedEmployee);
             }
 
+            /*Turn the query string into an SQLCommand, execute it and set the resulting DataTable
+            as the data source for the DataGridView in the main form*/
             comando.CommandText = queryString;
             
             northwindConn.Open();
