@@ -89,7 +89,7 @@ namespace NorthwindDBSearchOrders
             then use the smaller DataTable to load data into the corresponding ComboBox in the main form*/
             DataView viewShipperName = new DataView(collectedDataDT);
             DataTable shipperName = viewShipperName.ToTable("viewShipperName", true, "CompanyName");
-            shipperNameCB.DataSource = collectedDataDT;
+            shipperNameCB.DataSource = shipperName;
             shipperNameCB.DisplayMember = "CompanyName";
 
             /*From the main DataTable get a smaller DataView and then a corresponding DataTable including only the column of products' names:
